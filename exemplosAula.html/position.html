@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        p{
+            text-align: center;
+            margin-top: 45%;
+        }
+        .container{
+            padding: 0px; margin: 0px;
+            top: 150px;
+        }
+        .box{
+            display: inline-block;
+            border: 1px solid red;
+            height: 200px;
+            width: 200px;
+        }
+        #box1{
+            position: fixed;
+            border: 1px solid red;
+            background-color: red;
+            top: 1px;
+            left: 1px;
+        }
+        #box2{
+            position: fixed;
+            border: 1px solid green;
+            background-color: green;
+            bottom: 1px;
+            left: 1px;            
+        }
+        #box3{
+            position: fixed;
+            border: 1px solid gray;
+            background-color: gray;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #box4{
+            position: fixed;
+            border: 1px solid purple;
+            background-color: purple;
+            top: 1px;
+            right: 1px;
+        }
+        #box5{
+            position: fixed;
+            border: 1px solid yellow;
+            background-color: yellow;
+            bottom: 1px;
+            right: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box1" class="box"><p><b>Esquerda em cima</b></p></div>
+        <div id="box2" class="box"><p><b>Esquerda em baixo</b></p></div>
+        <div id="box3" class="box"><p><b>Centro</b></p></div>
+        <div id="box4" class="box"><p><b>Direita em cima</b></p></div>
+        <div id="box5" class="box"><p><b>Direita em baixo</b></p></div>
+    </div>
+</body>
+</html>
