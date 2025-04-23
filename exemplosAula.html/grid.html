@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        body{
+            grid-template-areas: 
+            "cabecario cabecario menup"
+            "main      main     ."
+            ".   footer    footer";
+
+
+            display: grid;
+            height: 100lvh;
+        }
+        .box{ border: 1px solid black;
+        }
+        #box1{
+            background-color: rebeccapurple;
+        grid-area: cabecario;
+        }
+        #box2{background-color: royalblue;
+        grid-area: footer;}
+
+        #box3{background-color: chocolate ;
+        grid-area: main;}
+
+        #box4{background-color: cadetblue;}
+
+        #box5{background-color: black;
+        grid-area: menup;}
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
+    <div class="box" id="box4">4</div>
+    <div class="box" id="box5">5</div>    
+</body>
+</html>
