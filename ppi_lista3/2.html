@@ -3,62 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atividade 2 - Layout</title>
     <style>
-        .body {
-            height: 100svh;
-            display: flex;
-            justify-content: center;
+        body {
+          background: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
         }
+    
         .container {
-            width: 50vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: white;
+          width: 250px;
+          height: 480px;
+          border: 2px solid purple;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px 10px;
+          box-sizing: border-box;
+          justify-content: space-between;
         }
-        .main {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    
+        .logo {
+          font-size: 13px;
+          color: gray;
+          margin-top: 5px;
         }
-        .p {
-            color: lightslategray;
-            margin-top: 1rem;
-            background-color: lightslategray;
-            height: 1rem;
-            width: 80%;
-            border-radius: 8px;
+    
+        .content {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          margin-top: 20px;
         }
-        .circulo {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: lightslategray;
-            margin-top: 1.5rem;
+    
+        .line {
+          width: 80%;
+          height: 12px;
+          background: lightgray;
+          border-radius: 4px;
         }
-        .botao {
-            width: 100px;
-            height: 30px;
-            background-color: lightslategray;
-            margin-top: 2rem;
-            border-radius: 6px;
+    
+        .circle {
+          width: 50px;
+          height: 50px;
+          background: silver;
+          border-radius: 50%;
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="main">
-            <p class="text">Company</p>
-            <div class="p"></div>
-            <div class="p"></div>
-            <div class="p"></div>
-            <div class="p"></div>
-            <div class="circulo"></div>
-            <div class="botao"></div>
+    
+        .button {
+          width: 60px;
+          height: 12px;
+          background: silver;
+          border-radius: 4px;
+          margin-bottom: 10px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="logo">Company Logo</div>
+        <div class="content">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
         </div>
-    </div>
-</body>
-</html>
+        <div class="circle"></div>
+        <div class="button"></div>
+      </div>
+    </body>
+    </html>
+     
