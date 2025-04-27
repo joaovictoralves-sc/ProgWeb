@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 4 - Layout</title>
+  <style>
+    body {
+      display: grid;
+      grid-template-areas:
+        "cabecalho cabecalho cabecalho"
+        "esquerda banner direita"
+        "esquerda principal direita"
+        "baixo baixo baixo"
+        "rodape rodape rodape";
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-rows: 80px 60px 1fr 60px 80px;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+
+    .box {
+      border: 1px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    #cabecalho { background: gold; grid-area: cabecalho; }
+    #banner { background: red; grid-area: banner; }
+    #esquerda { background: green; grid-area: esquerda; }
+    #direita { background: orange; grid-area: direita; }
+    #principal { background: blue; color: white; grid-area: principal; }
+    #baixo { background: yellowgreen; grid-area: baixo; }
+    #rodape { background: deepskyblue; grid-area: rodape; }
+
+    @media (max-width: 768px) {
+      body {
+        grid-template-areas:
+          "cabecalho"
+          "banner"
+          "esquerda"
+          "principal"
+          "direita"
+          "baixo"
+          "rodape";
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 60px 1fr 1fr 60px 60px 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box" id="cabecalho">Header</div>
+  <div class="box" id="banner">Banner</div>
+  <div class="box" id="esquerda">Left Aside</div>
+  <div class="box" id="principal">Main Content</div>
+  <div class="box" id="direita">Right Aside</div>
+  <div class="box" id="baixo">Low Content</div>
+  <div class="box" id="rodape">Footer</div>
+</body>
+</html>

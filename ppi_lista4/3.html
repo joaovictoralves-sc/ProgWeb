@@ -1,151 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layout Responsivo</title>
+  <title>Atividade 3 - Layout</title>
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body, html {
-      height: 100%;
-    }
-
-    .layout {
-      display: flex;
-      flex-direction: column;
       height: 100vh;
-      width: 100%;
+      padding: 10px;
+      background-color: white;
+      display: grid;
+      grid-template-areas:
+        "A A B B"
+        "C . . ."
+        "C . . .";
+      grid-template-columns: 2fr 2fr 1fr 1fr;
+      grid-template-rows: 120px 1fr 1fr;
     }
-    .top {
-      display: flex;
-    }
-    .top .a {
-      flex: 1;
-      background: #333;
-      color: white;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .top .b {
-      width: 100px;
-      background: #333;
-      color: white;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .main {
-      display: flex;
-      flex: 1;
-    }
-    .main .c {
-      width: 200px;
-      background: #333;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .main .grid {
-      flex: 1;
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .main .grid div {
-      width: 33.3333%;
-      height: 50%;
-      background: #ccc;
+    .box {
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      border: 1px solid white; /* Separação */
+      font-size: 24px;
+      border: 1px solid lightgray;
+      border-radius: 4px;
+      background-color: lightgray;
     }
+    #A { background-color: dimgray; color: white; grid-area: A; margin: 5px; }
+    #B { background-color: dimgray; color: white; grid-area: B; margin: 5px; }
+    #C { background-color: dimgray; color: white; grid-area: C; margin: 5px; }
 
-    /* Responsividade para smartphones (até 767px) */
-    @media (max-width: 767px) {
-      .top {
-        flex-direction: column;
-      }
-      .top .a, .top .b {
-        width: 100%;
-      }
-      .main {
-        flex-direction: column;
-      }
-      .main .c {
-        width: 100%;
-        height: 100px;
-      }
-      .main .grid {
-        flex-wrap: wrap;
-      }
-      .main .grid div {
-        width: 50%;
-        height: 100px;
-      }
+    #container {
+      background-color: dimgray;
+      grid-column: 2 / 5; 
+      grid-row: 2 / 4;  
+      display: grid;
+      grid-template-areas:
+        "E F G"
+        "M I J";
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      padding: 10px;
+      border-radius: 8px;
     }
-
-    /* Responsividade para tablets (768px a 1024px) */
-    @media (min-width: 768px) and (max-width: 1024px) {
-      .top {
-        flex-direction: row;
-      }
-      .top .a {
-        flex: 2;
-      }
-      .top .b {
-        flex: 1;
-      }
-      .main {
-        flex-direction: row;
-      }
-      .main .c {
-        width: 150px;
-      }
-      .main .grid div {
-        width: 33.3333%;
-        height: 100px;
-      }
+    #container .box {
+      margin: 5px;
+      background-color: lightgray;
+      color: black;
+      border: 1px solid lightgray;
     }
-
-    /* Estilos para desktops (maior que 1024px) */
-    @media (min-width: 1025px) {
-      .top {
-        flex-direction: row;
-      }
-      .main {
-        flex-direction: row;
-      }
-    }
+    #E { grid-area: E; }
+    #F { grid-area: F; }
+    #G { grid-area: G; }
+    #M { grid-area: M; }
+    #I { grid-area: I; }
+    #J { grid-area: J; }
   </style>
 </head>
 <body>
+  <div class="box" id="A">A</div>
+  <div class="box" id="B">B</div>
+  <div class="box" id="C">C</div>
 
-<div class="layout">
-  <div class="top">
-    <div class="a">A</div>
-    <div class="b">B</div>
+  <div id="container">
+    <div class="box" id="E">E</div>
+    <div class="box" id="F">F</div>
+    <div class="box" id="G">G</div>
+    <div class="box" id="M">M</div>
+    <div class="box" id="I">I</div>
+    <div class="box" id="J">J</div>
   </div>
-  <div class="main">
-    <div class="c">C</div>
-    <div class="grid">
-      <div>E</div>
-      <div>F</div>
-      <div>G</div>
-      <div>M</div>
-      <div>I</div>
-      <div>J</div>
-    </div>
-  </div>
-</div>
-
 </body>
 </html>
