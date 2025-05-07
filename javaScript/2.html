@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+    <style>
+        /* estilos para exibir os números em caixinhas com flex */
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid black;
+            width: 40px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        /* faça um programa que solicite ao usuário um número, usando
+         prompt, em seguida faça a contagem até esse número, ou seja, 
+         imprimindo cada elemento no console */
+
+         let numero = Number(prompt("Informe um número"));   
+
+         let listagem = document.createElement("ul");
+         document.body.appendChild(listagem);
+
+
+        /* adicione um elemento de listagem ao body e adicione cada
+         número, da contagem, á um item <li> */
+
+        for (let i = 0; i <= numero; i++) {
+            console.log("i = " + i);
+
+            let item = document.createElement("li");
+            item.innerHTML = i;
+            item.id = "n" + i;
+
+            /* alterar a cor de fundo para vermelho, dos itens contendo
+            números pares */
+            if (i % 2 === 0) { 
+                item.style.backgroundColor = "red"; 
+            }
+
+            listagem.appendChild(item);
+        }
+
+    </script>
+</body>
+</html>
