@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100svh;
+            margin: 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button>Click</button>
+    <script>
+        function sorteiaCorFundo() {
+            const cor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = cor;
+        }
+
+        document.querySelector("button").addEventListener("click", sorteiaCorFundo);
+    </script>
+</body>
+</html>
