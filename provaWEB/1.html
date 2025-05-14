@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>BlueHorizon - Sistema de gerenciamento de propriedades beira-mar | Tela Cadastro de Funcionário</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #6EC4E9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #dcdcdc;
+      padding: 30px;
+      border: 3px solid #3082C5;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header {
+      margin-bottom: 30px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .box {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+    }
+
+    p {
+      background-color: white;
+      box-shadow: inset 0 0 2px #999;
+      border-radius: 5px;
+      padding: 8px 10px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .p2 {
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 3px;
+      color: #555;
+    }
+
+    .p3 {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .button2 {
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      width: 200px;
+    }
+
+    .confirmar {
+      background-color: green;
+      color: white;
+    }
+
+    .cancelar {
+      background-color: darkred;
+      color: white;
+    }
+
+    @media screen and (max-width: 768px) {
+      .box {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .column {
+        width: 100%;
+      }
+
+      .button2 {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">CADASTRO DE FUNCIONÁRIO</div>
+    <div class="box">
+      <div class="column">
+        <p><span class="p2">Email</span><span class="p3">joao@gmail.com</span></p>
+        <p><span class="p2">Senha</span><span class="p3">********</span></p>
+        <p><span class="p2">Confirmar senha</span><span class="p3">********</span></p>
+      </div>
+
+      <div class="column">
+        <p><span class="p2">Nome</span><span class="p3">João Victor Alves</span></p>
+        <p><span class="p2">CPF</span><span class="p3">123.456.789-00</span></p>
+        <p><span class="p2">Telefone</span><span class="p3">(47) 98765-4321</span></p>
+        <p><span class="p2">Endereço</span><span class="p3">Rua X, 123</span></p>
+        <p><span class="p2">Data de nascimento</span><span class="p3">02/09/2007</span></p>
+      </div>
+
+      <div class="column">
+        <p><span class="p2">Data de contratação</span><span class="p3">11/09/2025</span></p>
+        <p><span class="p2">Salário</span><span class="p3">R$ 2.500,00</span></p>
+        <p><span class="p2">Cargo</span><span class="p3">Funcionário</span></p>
+      </div>
+    </div>
+
+    <div class="button">
+      <button class="button2 confirmar" onclick="alert('Cadastro efetuado!')">Efetuar cadastro</button>
+      <button class="button2 cancelar" onclick="alert('Cadastro cancelado!')">Cancelar cadastro</button>
+    </div>
+  </div>
+</body>
+</html>

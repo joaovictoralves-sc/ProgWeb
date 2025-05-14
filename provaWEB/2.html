@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>BlueHorizon - Sistema de gerenciamento de propriedades beira-mar | Tela Informações do Perfil</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #6EC4E9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #dcdcdc;
+      padding: 40px;
+      border-radius: 10px;
+      width: 70%;
+      max-width: 800px;
+      border: 3px solid #3082C5;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .box {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .column {
+      width: 48%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .p {
+      display: flex;
+      margin-bottom: 15px;
+    }
+
+    .p2 {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+
+    .p3 {
+      margin: 0;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+    }
+
+    .button2 {
+      padding: 10px 25px;
+      background-color: #bcbcbc;
+      border: none;
+      border-radius: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">INFORMAÇÕES DO PERFIL</div>
+    <div class="box">
+      <div class="column">
+        <div class="p"><span class="p2">Nome:</span><span class="p3">João Victor Alves</span></div>
+        <div class="p"><span class="p2">CPF:</span><span class="p3">123.456.789-00</span></div>
+        <div class="p"><span class="p2">Telefone:</span><span class="p3">(47) 98765-4321</span></div>
+        <div class="p"><span class="p2">Endereço:</span><span class="p3">Rua X, 123</span></div>
+        <div class="p"><span class="p2">Email:</span><span class="p3">joao@gmail.com</span></div>
+      </div>
+
+      <div class="column">
+        <div class="p"><span class="p2">Data de nascimento:</span><span class="p3">02/09/2007</span></div>
+        <div class="p"><span class="p2">Data de contratação:</span><span class="p3">11/09/2025</span></div>
+        <div class="p"><span class="p2">Cargo:</span><span class="p3">Funcionário</span></div>
+      </div>
+    </div>
+    <div class="button">
+      <button class="button2" onclick="alert('Abrir edição de perfil')">Personalizar perfil</button>
+    </div>
+  </div>
+</body>
+</html>
