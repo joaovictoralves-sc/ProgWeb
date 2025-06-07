@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de números aleatórios</title>
+  <meta charset="UTF-8">
+  <title>Sorteio de Números</title>
 </head>
 <body>
-    
+  <h1>Sorteio de Números</h1>
+  <input type="number" id="min" placeholder="Mínimo">
+  <input type="number" id="max" placeholder="Máximo">
+  <button onclick="sortear()">Sortear</button>
+  <p id="resultado"></p>
+  <ul id="lista"></ul>
+
+  <script>
+    let historico = [];
+
+    function sortear() {
+      const min = parseInt(document.getElementById("min").value);
+      const max = parseInt(document.getElementById("max").value);
+      const resultado = document.getElementById("resultado");
+      const lista = document.getElementById("lista");
+
+      if (isNaN(min) || isNaN(max) || min >= max) {
+        resultado.textContent = "Informe um intervalo válido!";
+        return;
+      }
+
+      const numero = Math.floor(Math.random() * (max - min + 1)) + min;
+
+      let encontrado = historico.find(item => item.numero === numero);
+      if (encontrado) {
+        encontrado.quantidade++;
+      } else {
+        historico.push({ numero, quantidade: 1 });
+      }
+
+      resultado.textContent = `Número sorteado: ${numero}`;
+      lista.innerHTML = "";
+
+      historico.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.numero} (sorteado ${item.quantidade}x)`;
+        lista.appendChild(li);
+      });
+    }
+  </script>
 </body>
 </html>
