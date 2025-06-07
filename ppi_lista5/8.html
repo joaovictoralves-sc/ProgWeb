@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cores com Tecla</title>
+</head>
+<body>
+  <h1>Aperte Espaço para mudar as cores</h1>
+
+  <script>
+    document.body.addEventListener("keydown", function(e) {
+      if (e.code === "Space") {
+        document.body.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+      }
+    });
+  </script>
+</body>
+</html>

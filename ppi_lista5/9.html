@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+</head>
+<body>
+  <h1>Calculadora</h1>
+  <input type="number" id="num1">
+  <select id="operador">
+    <option value="+">+</option>
+    <option value="-">−</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type="number" id="num2">
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcular() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+      const op = document.getElementById("operador").value;
+      const resultado = document.getElementById("resultado");
+
+      let total;
+      switch (op) {
+        case "+": total = n1 + n2; break;
+        case "-": total = n1 - n2; break;
+        case "*": total = n1 * n2; break;
+        case "/": total = n2 !== 0 ? n1 / n2 : "Erro (divisão por zero)"; break;
+      }
+      resultado.textContent = "Resultado: " + total;
+    }
+  </script>
+</body>
+</html>

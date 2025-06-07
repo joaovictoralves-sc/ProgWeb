@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Salvar Nome</title>
+</head>
+<body>
+  <input type="text" id="nameInput" placeholder="Digite seu nome">
+  <button id="saveButton">Salvar</button>
+  <p id="greeting"></p>
+
+  <script>
+    const input = document.getElementById("nameInput");
+    const btn = document.getElementById("saveButton");
+    const p = document.getElementById("greeting");
+
+    btn.addEventListener("click", () => {
+      const nome = input.value;
+      localStorage.setItem("nome", nome);
+      p.textContent = "Olá, " + nome + "!";
+    });
+
+    const nomeSalvo = localStorage.getItem("nome");
+    if (nomeSalvo) {
+      p.textContent = "Olá, " + nomeSalvo + "!";
+    }
+  </script>
+</body>
+</html>
