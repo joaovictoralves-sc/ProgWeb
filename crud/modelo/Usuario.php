@@ -1,4 +1,5 @@
-<?php   
+
+<?php 
 class Usuario{
     public $id;
     public $nome;
@@ -6,19 +7,15 @@ class Usuario{
     public $senha;
 
     public function __construct ($nome,$email,$senha){
-        $this.$nome = $nome;
-        $this.$senha = $senha;
-        $this.$email = $email;
-
+        $this->nome=$nome;
+        $this->email=$email;
+        $this->senha=$senha;
     }
+
     public function setNome($lnome){
         $this->nome=$lnome;
     }
 }
+
+
 ?>
-
-
-
-
-
-
