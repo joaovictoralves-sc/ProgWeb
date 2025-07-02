@@ -1,28 +1,30 @@
 <?php
-    include_once __DIR__.'./../Modelo/Conexao.php';
-    include_once __DIR__.'./Usuario.php';
-    include_once __DIR__.'./UsuarioDAO.php';
+   include_once __DIR__. './../modelo/Conexao.php';
+   include_once __DIR__. './../modelo/Usuario.php';
+   include_once __DIR__. './../modelo/UsuarioDAO.php';
 
-    class AuthController{
+   class AuthController{
+   
+       public function login(){
 
-        public function login($login, $email){
-            $dao = new UsuarioDAO();
+           $dao=new UsuarioDAO();
 
-            if(isset($_GET['login']) && isset($_POST['senha'])){
-                $login = $_POST['login'];
-                $senha = $_POST['senha'];
-                $usr = $dao -> autenticar($email, $senha);
-
-                if(!isset($usr)){
-                    header("Location:rota.php?rota=home");
-                }else{
-                    header("Location:rota.php")
-                }
-            }else{
-                header("Location:rota.php");
-            }
-        }
-
-    }
-
-?>
+           if((isset($_POST['email'])) && (isset($_POST['senha']))){
+               $email=$_POST['email'];
+               $senha=$_POST['senha'];
+               $usr=$dao->autenticar($email,$senha);
+               if (isset($usr) ){
+                    $_SESSION['usr']=$usr->id;
+                   header("Location:rota.php?rota=home") ;   
+               } else{
+                   header("Location:rota.php");
+               }
+           }else{
+               header("Location:rota.php");
+           }
+   
+   
+       }
+   
+   
+   }
