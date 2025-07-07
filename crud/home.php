@@ -1,30 +1,34 @@
 <?php
     session_start();
-
-   // var_dump();
-
-    if(!isset($_SESSION['usr'])){
+    
+    if(!isset($_SESSION['usuario'])){
         header("Location:rota.php");
     }
-    echo $_SESSION['usr'];
-
+    echo $_SESSION['usuario'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logout</title>
+    <title>Home</title>
 </head>
 <body>
-    <nav>
-        <a href="rota.php?rota=logout">LOGOUT</a>
-        <a href="rota.php?rota=cadastrar_usuario">Cadastrar Usuario</a>
-    </nav>
-    <h2>Lista de Usuarios</h2>
+
+<nav>
+<a href="rota.php?rota=logout"> LOGOUT </a>
+<br>
+<a href="rota.php?rota=cadastro"> CADASTRAR USUÁRIO </a>
+</nav>
+
+    <h2>Lista de Usuários</h2>
+
     <main>
         <?php require "listarUsuarios.php" ?>
-    </main>
+
+</main>
+
+
     
 </body>
 </html>
